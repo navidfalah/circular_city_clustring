@@ -1,0 +1,255 @@
+{
+    "Indicators for Waste Management and Reduction": {
+        "Waste Stream Optimization": {
+            "Flow of Waste and Waste Generation Rates": "Monitoring the quantity and flow of waste generated over time.",
+            "Generation of Priority Waste Streams": {
+                "Food Waste": "Volume of food waste generated.",
+                "Textiles": "Volume of textile waste generated.",
+                "EEE (Electrical and Electronic Equipment)": "Volume of EEE waste generated.",
+                "C&D (Construction and Demolition) Waste": "Volume of C&D waste generated."
+            },
+            "Minimization of Waste Production through Sustainable Materials": "Reduction in waste generation through the adoption of sustainable materials and practices."
+        },
+        "Landfill and Incineration Management": {
+            "Material Solid Waste Landfilled": "Total volume of solid waste disposed of in landfills.",
+            "Household Waste Ending in Landfills": "Volume of household waste that is landfilled.",
+            "Landfill Diversion Rates": "Percentage of waste diverted from landfills through recycling, composting, and other methods.",
+            "Material Solid Waste Incinerated": "Total volume of solid waste incinerated.",
+            "Landfilled Waste (%) Reduction Initiatives": "Initiatives and measures aimed at reducing the percentage of waste that ends up in landfills.",
+            "Waste Management Cost": "Total cost associated with waste management activities, including collection, processing, disposal, and recycling."
+        }
+    },
+    "Indicators for Recycling and Waste Management": {
+        "Water Recycling and Reuse": {
+            "Recycled Water Volumes": "Total volume of water recycled annually.",
+            "Optimal Reuse of Water": "Percentage of recycled water utilized for various purposes (e.g., irrigation, industrial processes, potable water)."
+        },
+        "Waste Reduction": {
+            "Waste Reduction and Recycling Rates": "Percentage reduction in waste generation and the rate of recycling.",
+            "Waste Disposal into Fresh and Saltwater Bodies": "Volume of waste disposed of in freshwater and marine environments.",
+            "Recovery and Reuse of Water Resources": "Volume of water resources recovered and reused.",
+            "Amount of Waste Used in Households and Other Parts (e.g., Transportation)": "Percentage of waste repurposed for household and transportation needs.",
+            "Reuse of Waste and Reduction of Resource Depletion": "Volume of waste reused, contributing to the conservation of natural and non-renewable resources.",
+            "Retrofitting Projects that Maximize Energy Efficiency and Minimize Waste": "Number and impact of retrofitting projects aimed at improving energy efficiency and reducing waste.",
+            "Percentage of Food Waste Treated": "Proportion of food waste treated through composting, anaerobic digestion, or other methods."
+        },
+        "Environmental Remediation Costs": {
+            "Flood Remediation Costs": "Total costs associated with flood damage remediation.",
+            "Chemical Remediation Costs": "Total costs associated with the remediation of chemical spills or contamination."
+        }
+    },
+    "Recycling and Resource Recovery": {
+        "Recycle and Reused Waste Rates": {
+            "Overall Recycling Rate": "Percentage of total waste that is recycled.",
+            "Rate of Waste Materials Reused": "Percentage of waste materials that are reused."
+        },
+        "Local Resources": {
+            "Wind Potential": "Capacity for wind energy production.",
+            "Solar Potential": "Capacity for solar energy production.",
+            "Green Roofs": "Area covered by green roofs and their environmental impact.",
+            "Import/Export Balances": "Balance of imported and exported waste and recyclables."
+        }
+    },
+    "Optimizing Waste Management Processes": {
+        "Waste Reduction and Circular Processes": "Implementation of circular economy principles in waste management.",
+        "Managing and Reducing Noise Pollution": "Levels of noise pollution and measures taken to reduce it.",
+        "Pollution Reduction": "Emission levels of pollutants and reduction measures in place.",
+        "Mitigation of Environmental Impacts": "Strategies and measures to mitigate the environmental impacts of waste production and management.",
+        "Reduction of Waste Production through Sustainable Materials": "Percentage reduction in waste production through the use of sustainable materials.",
+        "Amount of Waste Produced in the City": "Total waste produced in the city annually."
+    },
+    "Indicators for Resource Management": {
+        "Recycling Processes and Rates": {
+            "Recycling Materials and Rates": "Percentage of different materials recycled (e.g., paper, plastic, glass, metals).",
+            "Zero Material Waste Targets": "Progress towards achieving zero material waste.",
+            "Amount or Percentage of Recycled Material": "Total volume or percentage of materials recycled.",
+            "Products Reused and Recovered": "Volume or percentage of products reused and recovered through recycling processes."
+        },
+        "Specialized Recycling Practices": {
+            "Recycling of Non-Ferrous Metals": "Volume or percentage of non-ferrous metals recycled."
+        },
+        "Initiatives": {
+            "Recycling Initiatives": "Specific programs or policies implemented to enhance recycling practices."
+        },
+        "Building and Material Lifecycle Optimization": {
+            "Lifecycle Management of Buildings and Materials": "Practices and policies for managing the lifecycle of buildings and materials from construction to demolition."
+        },
+        "Comprehensive Resource Management": {
+            "Sustainable and Efficient Production and Consumption Patterns": "Measures to promote sustainable production and consumption.",
+            "Use of Non-Virgin and Low-Carbon Footprint Materials": "Volume or percentage of non-virgin and low-carbon footprint materials used.",
+            "Economic Value of Resource Use": "Economic impact and value derived from efficient resource use."
+        }
+    },
+    "Indicators for Resource Efficiency and Material Cycles": {
+        "Resource Management and Construction Practices": {
+            "Reuse of Building Materials in New Constructions": "Volume or percentage of reused materials in new construction projects.",
+            "Efficient Use of Resources, Materials, and Construction Techniques": "Adoption of efficient construction techniques and resource use.",
+            "Techniques to Maximize the Effective Lifecycle of Buildings": "Implementation of methods to extend the lifecycle of buildings."
+        },
+        "Environmental Impact Mitigation": {
+            "Measures to Improve Sustainability": "Strategies to enhance physical, mental, and emotional well-being through sustainable practices.",
+            "Green and Blue Infrastructure": "Development and maintenance of green spaces (green infrastructure) and water-related structures (blue infrastructure) to support urban resilience.",
+            "Use of New or Traditional Materials": "Incorporation of new or traditional renewable materials in construction and other sectors."
+        },
+        "Eco-Design and Sustainable Materials": {
+            "Eco-Design Practices": "Implementation of design principles that promote sustainability.",
+            "Sharing and Collaborative Consumption Strategies": "Promotion of sharing economy models and collaborative consumption."
+        },
+        "Material and Resource Consumption": {
+            "Resource Consumption": "Total volume of resources consumed annually.",
+            "Flow of Materials, Energy, and Resources": "Tracking the flow of materials, energy, and resources through the economy.",
+            "Amount of Raw Materials Used": "Volume of raw materials used in the manufacturing process.",
+            "Virgin Material Use": "Percentage of virgin materials used versus recycled materials."
+        },
+        "Sustainable Material Use": {
+            "Fossil Fuel Consumption": "Total volume of fossil fuels consumed and measures to reduce it."
+        },
+        "Optimized Resource Use": {
+            "Average Amount of Raw Material Retained in the Cycle per Citizen per Year": "Measurement of how much raw material remains in use annually per person.",
+            "Reduction of Toxic Emissions": "Measures and progress in reducing toxic emissions from various processes.",
+            "Energy Generated During Waste Treatment and Reused": "Amount of energy produced from waste treatment processes and its subsequent reuse.",
+            "Resource Efficiency (Labor, Material Inputs, or Energy)": "Optimization and efficiency of resources such as labor, materials, and energy.",
+            "Reducing Non-Renewable Resources": "Efforts and measures to reduce the use of non-renewable resources.",
+            "Reuse of Waste and Reduction of Resource Depletion": "Strategies to reuse waste and minimize the depletion of natural and non-renewable resources.",
+            "Renewable-Energy Systems and Efficient Use of Energy": "Implementation and efficiency of renewable energy systems.",
+            "Control of Organic Matter from Waste": "Management and reduction of organic matter in waste streams."
+        }
+    },
+    "Indicators for Sustainable Production and Consumption": {
+        "Reduce Material Consumption": {
+            "Material Consumption Reduction": "Measurement of the decrease in material consumption over time.",
+            "Use of Local Materials and Secondary Raw Materials": "Volume or percentage of local and secondary raw materials used."
+        },
+        "Optimization of Raw Material Use": {
+            "Resource-Efficient and Circular Material Life Cycles": "Implementation and impact of circular economy principles in material use."
+        },
+        "Product Lifecycle Extension": {
+            "Increasing Durability of Products": "Initiatives and measures taken to enhance the durability of products.",
+            "Redesign for Reuse and Recycling of Products": "Percentage of products designed for easier reuse and recycling.",
+            "Prolonging the Lifespan of Products": "Strategies and practices aimed at extending product lifespan.",
+            "Lifetime Extension Practices": "Adoption of practices that contribute to the extension of product lifecycles.",
+            "Focus on Locally Produced Food": "Promotion and use of locally produced food.",
+            "Refurbishment and Recycling of Products": "Volume or percentage of products refurbished and recycled.",
+            "Remanufacturing Processes Involving Water Use": "Implementation and efficiency of remanufacturing processes that use water."
+        }
+    },
+    "Indicators for Circular Production Systems": {
+        "Local Loop Systems and Waste Minimization": {
+            "Community-Based Recycling Initiatives": "Number and impact of community-based recycling programs.",
+            "Recycling Rate": "Overall rate of recycling within the local loop system."
+        },
+        "Recycling and Reuse": {
+            "Thermal Hydrolysis": "Implementation and effectiveness of thermal hydrolysis processes."
+        }
+    },
+    "Indicators for Product Lifecycle Enhancement": {
+        "Durability and Longevity": {
+            "Increase Longevity of Products": "Measures and results related to increasing product longevity."
+        },
+        "Optimized Material Use": {
+            "Make Good Use of Material": "Efficiency and optimization of material use in production processes.",
+            "Lifetime Extension": "Adoption of practices and technologies aimed at extending the lifetime of products."
+        }
+    },
+
+    "Indicators for Pollution Control and Air Quality": {
+        "Emissions and Air Quality Management": {
+            "Greenhouse Gas and CO2 Emission Reduction": "Measurements of reductions in greenhouse gas and CO2 emissions.",
+            "Air Quality Improvements": "Improvements in air quality indices over time.",
+            "Pollution Reduction": "Reduction in levels of various pollutants (e.g., particulate matter, NOx, SOx).",
+            "Greenhouse Gas Emissions Along a Building's Lifecycle": "Assessment of greenhouse gas emissions throughout the lifecycle of buildings."
+        }
+    },
+    "Indicators for Energy Recovery and System Efficiency": {
+        "Energy from Waste": {
+            "Production of Thermal Energy from Waste Heat": "Amount of thermal energy produced from waste heat recovery processes."
+        },
+        "Efficient Use of Resources": {
+            "Pollution of Resource and Material Reduction": "Initiatives and results in reducing pollution from resource and material use."
+        },
+        "Remanufacturing and Extended Producer Responsibility": {
+            "Remanufacturing Practices": "Implementation and efficiency of remanufacturing practices.",
+            "Extended Producer Responsibility (EPR) Initiatives": "Adoption and impact of EPR initiatives."
+        }
+    },
+    "Indicators for Sustainable Energy Flow Management": {
+        "Energy Recovery from Waste": {
+            "Material and Energy Conservation": "Metrics on the conservation of materials and energy through waste recovery processes."
+        },
+        "Sustainable Resource Utilization": {
+            "Resource-Efficient and Circular Material Life Cycles": "Adoption and impact of circular economy practices in resource utilization.",
+            "Remanufacturing Processes": "Efficiency and implementation of remanufacturing processes.",
+            "Extended Producer Responsibility Initiatives": "Effectiveness of EPR initiatives in promoting sustainable resource use."
+        },
+        "Renewable Energy Integration": {
+            "Renewable Energy Penetration": "Percentage of energy derived from renewable sources.",
+            "Access to Electricity": "Measures of access to electricity, particularly from renewable sources.",
+            "Circular Economy (CE) Innovation Budget": "Budget allocation for CE innovations and initiatives."
+        },
+        "Energy Consumption and Renewable Energy Usage": {
+            "Renewable Energy Systems Penetration": "Extent of penetration and usage of renewable energy systems.",
+            "Efficient Use of Energy": "Metrics on energy efficiency improvements.",
+            "Grid Integration": "Integration of renewable energy into the grid.",
+            "Energy Consumption": "Total energy consumption metrics."
+        },
+        "Pollution Control and Emission Management": {
+            "Carbon Footprint and Greenhouse Gas Emissions": "Measurement and reduction of carbon footprint and greenhouse gas emissions.",
+            "Flow of Emissions": "Tracking and management of emissions flow.",
+            "Carbon Storage and Sequestration in Vegetation and Soil": "Amount of carbon stored and sequestered in vegetation and soil."
+        }
+    },
+    "Indicators for Water Efficiency and Conservation": {
+        "Water Use Reduction": {
+            "Water Reduction in Production Processes": "Measurement of reductions in water use within production processes.",
+            "Reduction in Potable Water Consumption": "Initiatives and metrics related to reducing potable water consumption."
+        },
+        "Efficient Water Management": {
+            "Efficient Use of Water Resources": "Implementation and effectiveness of measures to use water resources efficiently.",
+            "Safe Water Accessibility": "Availability and accessibility of safe drinking water.",
+            "Water Quality and Availability": "Measures of water quality and its availability for various uses.",
+            "Grey-Water Reuse and Black-Water Recycling": "Implementation and effectiveness of grey-water reuse and black-water recycling practices."
+        },
+        "Water Usage": {
+            "Amount of Water Used in Houses": "Measurement of water consumption in residential settings.",
+            "Amount of Water Used in Other Sectors": "Water usage metrics in various sectors, such as transportation and industry.",
+            "Integration of Water Resource Management with Human and Material Potential": "Strategies and practices that integrate water resource management with human and material resources.",
+            "Strategies to Enhance Material and Human Engagement in Water Conservation": "Initiatives and programs aimed at increasing engagement in water conservation efforts among individuals and organizations."
+        }
+    },
+    "Indicators for Environmental Quality Protection and Climate Resilience": {
+        "Natural System Management": {
+            "Protecting the Natural Environment and Regenerating Natural Systems": "Initiatives and outcomes in protecting and regenerating natural ecosystems.",
+            "Air Quality Assessment": "Measurements and improvements in air quality indices.",
+            "Virgin Resources Used": "Volume or percentage of virgin resources used in various processes.",
+            "Biogas Utilization and Impact": "Usage and environmental impact of biogas.",
+            "Ecological Restoration and Biodiversity Enhancement": "Projects and outcomes related to ecological restoration and biodiversity enhancement.",
+            "Number of Projects Including Nature-Based Solutions": "Count and details of projects implementing nature-based solutions.",
+            "Amount of Financial Support to Implement Nature-Based Solutions": "Funding allocated for nature-based solution projects.",
+            "Habitat Restoration": "Area or volume of habitats restored."
+        },
+        "Environmental Quality and Ecosystem Services": {
+            "Pollution Control and Carbon Management": {
+                "Pollution Reduction Initiatives": "Specific programs and their effectiveness in reducing pollution.",
+                "Carbon Management Practices": "Implementation and impact of carbon management strategies."
+            },
+            "Value and Impact of Green Spaces": {
+                "Monetary Values of Each Vegetation Community Type": "Economic valuation of different vegetation types.",
+                "Distribution of Public Green Space": "Total surface area or per capita availability of public green spaces.",
+                "Amount of Pollutants Captured by Vegetation": "Volume of pollutants captured by green infrastructure.",
+                "Adaptation of Green and Blue Infrastructure": "Projects and measures to adapt green and blue infrastructure to regulate CO2 emissions, mitigate flooding, and support biomass cogeneration.",
+                "Restoration of Ecosystem Services": "Initiatives and outcomes in restoring ecosystem services."
+            },
+            "Climate Change Adaptation and Mitigation": {
+                "Increase in Resilience to Climate Change": "Measures and results in enhancing climate resilience.",
+                "Adaptation and Resilience to Urban Climate Change": "Strategies and effectiveness in adapting to urban climate change impacts.",
+                "Urban Heat Island Effect Mitigation": "Initiatives and success in mitigating the urban heat island effect.",
+                "Cost of Grey Infrastructure": "Financial costs associated with grey infrastructure projects.",
+                "Eco-Innovation and Eco-Design": "Adoption and impact of eco-innovation and eco-design practices.",
+                "Life Cycle Assessment": "Use of life cycle assessments in evaluating environmental impacts.",
+                "Innovation in Environmental Technologies and Processes": "Development and implementation of new environmental technologies and processes.",
+                "Innovation in Sustainable Practices and Technologies": "Advancements in sustainable practices and technologies.",
+                "Developing New Methods for Enhancing Urban Resilience and Sustainability": "Research and development of new methods to improve urban resilience and sustainability."
+            }
+        }
+    }
+}

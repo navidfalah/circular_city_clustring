@@ -1,0 +1,40 @@
+Dimension,Core Features,Examples of Indicators,Key Initiatives
+Environmental,Resource Efficiency,"GHG emissions (e.g., CO2, methane), Energy consumption per unit of production, Water usage and water stress levels, Waste generation and recycling rates, Biodiversity indices and species diversity","Energy efficiency programs, Water conservation campaigns, Material reuse initiatives"
+Environmental,Pollution Control and Waste Management,"Emissions levels, Waste diversion rates, Recycling rates, Hazardous waste management, Noise pollution levels","Recycling facilities, Waste-to-energy plants, Emission control regulations"
+Environmental,Climate Action,"GHG emissions reduction targets, Renewable energy adoption, Climate adaptation plans, Carbon offset projects","Renewable energy projects, Carbon capture and storage, Climate resilience planning"
+Environmental,Biodiversity Conservation,"Protected areas, Species richness, Habitat restoration projects, Ecosystem services valuation","Habitat protection laws, Conservation funding, Biodiversity monitoring"
+Environmental,Sustainable Land Use,"Land use efficiency, Urban sprawl control, Brownfield redevelopment, Green infrastructure","Urban planning reforms, Greenbelt policies, Sustainable architecture"
+Environmental,Water Management,"Water quality, Water recycling rates, Rainwater harvesting, Aquifer recharge initiatives","Desalination plants, Water-saving technologies, Watershed management"
+Environmental,Air Quality Management,"Particulate matter concentration, NOx and SOx levels, Air quality monitoring systems, Public health impacts","Clean air zones, Emission reduction incentives, Health advisory services"
+Social,Human Rights and Labor Conditions,"Worker rights policies, Child labor incidence, Workplace safety standards, Human rights training","Labor rights audits, Fair labor certification, Workplace diversity programs"
+Social,Community Engagement,"Community participation in planning, Local advisory councils, Public consultations, Community investment projects","Local governance frameworks, Participatory budgeting, Community outreach"
+Social,"Health, Safety, and Well-being","Occupational health standards, Public health services, Disease prevention programs, Mental health support","Workplace wellness programs, Health insurance schemes, Safety training"
+Social,Education and Skills Development,"School enrollment rates, Literacy rates, Vocational training programs, Lifelong learning opportunities","Educational reform, Scholarships, Corporate training partnerships"
+Social,Social Equity and Diversity,"Income equality metrics, Poverty reduction programs, Access to basic services, Anti-discrimination policies","Social welfare programs, Anti-poverty initiatives, Inclusive policymaking"
+Social,Cultural Heritage Preservation,"Conservation of historical sites, Promotion of local arts and culture, Heritage education programs","Restoration grants, Cultural festivals, Heritage tourism promotion"
+Social,Housing and Living Conditions,"Affordable housing availability, Homelessness rates, Housing quality standards, Urban renewal projects","Social housing projects, Rent control policies, Urban redevelopment"
+Economic,Economic Performance,"Revenue growth, Profit margins, Return on investment, Economic value generated","Financial planning, Market analysis, Economic impact assessments"
+Economic,Innovation and Infrastructure,"R&D spending, Patents filed, Infrastructure quality, Technological advancements","Innovation hubs, Smart city technologies, Public-private partnerships"
+Economic,Market Presence and Competitiveness,"Market share, Customer satisfaction, Brand reputation, Competitive analysis","Market analysis, Consumer feedback mechanisms, Competitive strategies"
+Economic,Sustainable Procurement,"Ethical sourcing policies, Supplier diversity, Fair trade practices, Supply chain transparency","Sustainable sourcing, Supplier partnerships, Ethical audits"
+Economic,Economic Resilience,"Economic diversification, Crisis management plans, Financial stability measures","Diversification strategies, Risk management frameworks, Economic buffers"
+Economic,Economic Growth and Stability,"GDP growth, Employment rates, Investment levels, Economic forecasting","Investment in infrastructure, Business incentives, Economic zones"
+Economic,Responsible Production and Consumption,"Sustainable product design, Consumer awareness campaigns, Circular economy practices","Product lifecycle analysis, Eco-labeling, Consumer education"
+Economic,Employment and Job Quality,"Unemployment rates, Job satisfaction, Wages and benefits, Worker productivity","Job creation programs, Employee benefits enhancement, Career development"
+Environmental,Air Quality Management,PM 2.5 Levels,Smog Reduction Strategies
+Environmental,Water Resource Management,Water Usage Efficiency,Water Treatment Facilities
+Environmental,Biodiversity Preservation,Species at Risk,Wildlife Protection Laws
+Environmental,Sustainable Agriculture,Crop Rotation Adherence,Organic Farming Grants
+Environmental,Green Energy Solutions,Renewable Energy Share,Wind Turbine Installations
+Social,Equity in Education,School Enrollment Rates,Free School Programs
+Social,Healthcare Accessibility,Doctor to Patient Ratio,Rural Health Missions
+Social,Labor Rights Enforcement,Workplace Accidents,Fair Labor Practices
+Social,Community Development,Community Initiative Participation,Urban Revitalization Projects
+Social,Social Inclusion,Diversity Indices,Inclusive Policy Making
+Economic,Economic Growth,GDP Per Capita,Growth Stimulus Packages
+Economic,Financial Stability,Banking Penetration,Credit Guarantee Schemes
+Economic,Trade Policy Development,Trade Balance,Free Trade Agreements
+Economic,Economic Resilience,Recovery Index,Disaster Preparedness Plans
+Economic,Market Regulation,Compliance Rates,Regulatory Overhaul
+Economic,Investment Incentives,Foreign Direct Investment,Startup Seed Funding
+
