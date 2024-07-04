@@ -7,6 +7,7 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import nltk
 import matplotlib.pyplot as plt
+from matplotlib_venn import venn3
 import seaborn as sns
 import numpy as np
 import os
@@ -24,13 +25,11 @@ def preprocess_text(text):
     lemmatized = [lemmatizer.lemmatize(token) for token in tokens if token.isalpha()]
     return ' '.join([word for word in lemmatized if word not in stopwords.words('english')])
 
-# Load the indicator data
-indicator_df = pd.read_csv('indicators.csv')
+# Load feature data from CSV (assuming similar structure as before)
+features_df = pd.read_csv('features.csv')
+indicator_df = pd.read_csv('indicators.csv')  # Load indicator data from the new CSV
 
-# Load the SDG 11 indicators
-sdg11_df = pd.read_csv('sdg11.csv')
-
-# Preprocess the texts from the indicators
+# Apply weights and preprocess text
 texts = []
 indicator_weights = {'Category': 1, 'Subcategory': 1, 'Indicator': 1, 'Description': 1}
 for _, row in indicator_df.iterrows():
@@ -40,15 +39,20 @@ for _, row in indicator_df.iterrows():
                      preprocess_text(row['Description']) * indicator_weights['Description']])
     texts.append(text)
 
-# Check if texts are not empty
-if not texts:
-    raise ValueError("All preprocessed texts are empty. Check the preprocessing steps and input data.")
+# Apply weights to features and preprocess text
+feature_weights = {'Dimension': 1, 'Core Features': 1, 'Examples of Indicators': 1, 'Key Initiatives': 1}
+for _, row in features_df.iterrows():
+    text = ' '.join([preprocess_text(row['Dimension']) * feature_weights['Dimension'], 
+                     preprocess_text(row['Core Features']) * feature_weights['Core Features'], 
+                     preprocess_text(row['Examples of Indicators']) * feature_weights['Examples of Indicators'], 
+                     preprocess_text(row['Key Initiatives']) * feature_weights['Key Initiatives']])
+    texts.append(text)
 
 # Vectorization and NMF
 vectorizer = TfidfVectorizer(stop_words='english', max_df=0.85, min_df=1, ngram_range=(1, 2))
 X = vectorizer.fit_transform(texts)
 
-nmf = NMF(n_components=16, random_state=0, init='nndsvd')
+nmf = NMF(n_components=3, random_state=0, init='nndsvd')
 W = nmf.fit_transform(X)
 W_normalized = normalize(W, norm='l1', axis=1)
 
@@ -70,8 +74,19 @@ for i, comp in enumerate(nmf.components_):
     sorted_terms = sorted(terms_comp, key=lambda x: x[1], reverse=True)[:top_terms]
     print(f"Cluster {i+1}: " + ", ".join([t[0] for t in sorted_terms]))
 
-# Based on the top terms, assign the cluster names if desired
-cluster_names = [f'Class {i+1}' for i in range(16)]
+# Based on the top terms, manually assign the cluster names
+cluster_names = ['Economic', 'Environmental', 'Social']
+
+# Calculate intersections for Venn diagram
+venn_labels = {
+    '100': sum((memberships[:, 0] == 1) & (memberships[:, 1] == 0) & (memberships[:, 2] == 0)),
+    '010': sum((memberships[:, 0] == 0) & (memberships[:, 1] == 1) & (memberships[:, 2] == 0)),
+    '001': sum((memberships[:, 0] == 0) & (memberships[:, 1] == 0) & (memberships[:, 2] == 1)),
+    '110': sum((memberships[:, 0] == 1) & (memberships[:, 1] == 1) & (memberships[:, 2] == 0)),
+    '101': sum((memberships[:, 0] == 1) & (memberships[:, 1] == 0) & (memberships[:, 2] == 1)),
+    '011': sum((memberships[:, 0] == 0) & (memberships[:, 1] == 1) & (memberships[:, 2] == 1)),
+    '111': sum((memberships[:, 0] == 1) & (memberships[:, 1] == 1) & (memberships[:, 2] == 1))
+}
 
 # Display counts of indicators per cluster
 print("Counts of indicators in each cluster:")
@@ -82,29 +97,54 @@ for name, idx in zip(cluster_names, range(len(cluster_names))):
 plot_dir = 'plots'
 os.makedirs(plot_dir, exist_ok=True)
 
-# Heatmap showing relationship between indicators and SDG 11 clusters
-plt.figure(figsize=(12, 8))
-sns.heatmap(W_normalized, cmap='coolwarm', xticklabels=cluster_names, yticklabels=indicator_df['Indicator'], cbar=True)
-plt.title('Heatmap of Indicators vs. SDG 11 Clusters')
-plt.xlabel('SDG 11 Clusters')
-plt.ylabel('Indicators')
-plt.savefig(os.path.join(plot_dir, 'heatmap_indicators_vs_sdg11.png'))
+# Venn Diagram visualization
+plt.figure(figsize=(10, 8))
+venn3(subsets=venn_labels, set_labels=cluster_names)
+plt.title("Venn Diagram of Indicator Clusters")
+plt.savefig(os.path.join(plot_dir, 'venn_diagram.png'))
+plt.close()
+
+# Optional: Display the top terms per cluster with assigned names
+print("\nTop terms per cluster with assigned names:")
+for name, comp in zip(cluster_names, nmf.components_):
+    terms_comp = zip(features, comp)
+    sorted_terms = sorted(terms_comp, key=lambda x: x[1], reverse=True)[:top_terms]
+    print(f"Cluster {name}: " + ", ".join([t[0] for t in sorted_terms]))
+
+# Additional Statistics and Visualizations
+
+# Heatmap of Cluster Memberships with group names
+plt.figure(figsize=(12, 6))
+sns.heatmap(W_normalized, cmap='coolwarm', cbar=True, xticklabels=cluster_names, yticklabels=False)
+plt.title('Heatmap of Cluster Memberships')
+plt.xlabel('Clusters')
+plt.ylabel('Documents')
+plt.savefig(os.path.join(plot_dir, 'heatmap_cluster_memberships.png'))
 plt.close()
 
 # Boxplot of Cluster Membership Strengths with group names
-plt.figure(figsize=(12, 8))
+plt.figure(figsize=(10, 6))
 sns.boxplot(data=W_normalized)
 plt.title('Boxplot of Cluster Membership Strengths')
 plt.xlabel('Clusters')
 plt.ylabel('Membership Strength')
-plt.xticks(ticks=range(len(cluster_names)), labels=cluster_names, rotation=45)
+plt.xticks(ticks=range(len(cluster_names)), labels=cluster_names)
 plt.savefig(os.path.join(plot_dir, 'boxplot_membership_strengths.png'))
 plt.close()
 
 # Pie chart of Cluster Distribution with group names
 cluster_counts = [sum(memberships[:, i] == 1) for i in range(len(cluster_names))]
-plt.figure(figsize=(12, 12))
+plt.figure(figsize=(8, 8))
 plt.pie(cluster_counts, labels=cluster_names, autopct='%1.1f%%', startangle=140, colors=sns.color_palette("coolwarm", len(cluster_names)))
 plt.title('Pie Chart of Cluster Distribution')
 plt.savefig(os.path.join(plot_dir, 'pie_chart_cluster_distribution.png'))
 plt.close()
+
+cluster_data = pd.DataFrame(memberships, columns=cluster_names)
+indicator_names = indicator_df['Indicator'].tolist() + features_df['Examples of Indicators'].tolist()  # Adjust based on actual data column names
+cluster_data.insert(0, 'Indicator', indicator_names)
+
+# Export to CSV
+output_csv_path = 'cluster_assignments.csv'
+cluster_data.to_csv(output_csv_path, index=False)
+print(f"Cluster assignments saved to {output_csv_path}")

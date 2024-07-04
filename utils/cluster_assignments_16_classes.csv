@@ -1,0 +1,138 @@
+Indicator,Class 1,Class 2,Class 3,Class 4,Class 5,Class 6,Class 7,Class 8,Class 9,Class 10,Class 11,Class 12,Class 13,Class 14,Class 15,Class 16
+Flow of Waste and Waste Generation Rates,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1
+Food Waste,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+Textiles,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+EEE (Electrical and Electronic Equipment),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+C&D (Construction and Demolition) Waste,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+Minimization of Waste Production through Sustainable Materials,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,1
+Material Solid Waste Landfilled,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+Household Waste Ending in Landfills,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+Landfill Diversion Rates,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0
+Material Solid Waste Incinerated,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0
+Landfilled Waste (%) Reduction Initiatives,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+Waste Management Cost,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,1
+Recycled Water Volumes,0,1,0,0,1,0,0,0,1,0,0,0,1,0,0,0
+Optimal Reuse of Water,0,1,0,0,1,0,0,0,1,0,0,0,1,0,0,0
+Waste Reduction and Recycling Rates,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Waste Disposal into Fresh and Saltwater Bodies,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Recovery and Reuse of Water Resources,0,1,0,0,1,0,0,0,1,0,0,0,0,1,0,0
+"Amount of Waste Used in Households and Other Parts (e.g., Transportation)",0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+Reuse of Waste and Reduction of Resource Depletion,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Retrofitting Projects that Maximize Energy Efficiency and Minimize Waste,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0
+Percentage of Food Waste Treated,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+Flood Remediation Costs,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+Chemical Remediation Costs,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+Overall Recycling Rate,0,1,0,0,0,0,0,0,1,0,0,0,0,1,0,0
+Rate of Waste Materials Reused,0,1,0,0,0,0,0,0,1,0,0,0,0,1,0,0
+Wind Potential,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0
+Solar Potential,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0
+Green Roofs,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0
+Import/Export Balances,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1
+Implementation of circular economy principles in waste management.,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+Levels of noise pollution and measures taken to reduce it.,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Emission levels of pollutants and reduction measures in place.,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Strategies and measures to mitigate the environmental impacts of waste production and management.,0,1,1,0,0,0,0,1,0,0,0,0,0,0,1,0
+Percentage reduction in waste production through the use of sustainable materials.,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Total waste produced in the city annually.,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Recycling Materials and Rates,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Zero Material Waste Targets,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,1
+Amount or Percentage of Recycled Material,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0
+Products Reused and Recovered,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0
+Recycling of Non-Ferrous Metals,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Recycling Initiatives,0,0,0,0,0,0,0,0,1,0,1,0,0,1,0,0
+Lifecycle Management of Buildings and Materials,1,0,0,0,0,1,1,0,1,1,0,0,0,0,0,1
+Sustainable and Efficient Production and Consumption Patterns,1,0,0,1,0,1,0,0,1,1,1,0,0,0,0,0
+Use of Non-Virgin and Low-Carbon Footprint Materials,1,0,0,0,0,0,1,0,1,1,0,0,0,0,0,0
+Economic Value of Resource Use,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0
+Reuse of Building Materials in New Constructions,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0
+"Efficient Use of Resources, Materials, and Construction Techniques",1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Techniques to Maximize the Effective Lifecycle of Buildings,1,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0
+Measures to Improve Sustainability,1,0,1,0,0,1,0,1,0,1,0,0,0,0,0,0
+Green and Blue Infrastructure,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Use of New or Traditional Materials,1,0,1,0,0,0,0,1,0,1,0,0,0,0,0,0
+Eco-Design Practices,1,0,1,0,0,0,0,0,0,1,1,0,0,0,0,0
+Sharing and Collaborative Consumption Strategies,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Resource Consumption,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+"Flow of Materials, Energy, and Resources",1,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0
+Amount of Raw Materials Used,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Virgin Material Use,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0
+Fossil Fuel Consumption,1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0
+Average Amount of Raw Material Retained in the Cycle per Citizen per Year,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Reduction of Toxic Emissions,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Energy Generated During Waste Treatment and Reused,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1
+"Resource Efficiency (Labor, Material Inputs, or Energy)",1,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0
+Reducing Non-Renewable Resources,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Reuse of Waste and Reduction of Resource Depletion,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Renewable-Energy Systems and Efficient Use of Energy,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Control of Organic Matter from Waste,1,1,0,0,0,0,1,0,0,0,0,1,0,0,0,1
+Material Consumption Reduction,0,0,0,1,0,1,1,0,0,1,0,0,0,0,0,0
+Use of Local Materials and Secondary Raw Materials,0,0,0,0,0,1,0,0,0,1,0,0,0,1,0,0
+Resource-Efficient and Circular Material Life Cycles,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0
+Increasing Durability of Products,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Redesign for Reuse and Recycling of Products,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0
+Prolonging the Lifespan of Products,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Lifetime Extension Practices,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Focus on Locally Produced Food,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1
+Refurbishment and Recycling of Products,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0
+Remanufacturing Processes Involving Water Use,0,0,0,0,1,1,0,0,0,0,1,0,0,0,0,0
+Community-Based Recycling Initiatives,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+Recycling Rate,0,1,0,0,0,0,0,0,1,0,0,0,0,1,0,0
+Thermal Hydrolysis,0,1,0,0,1,1,0,0,1,0,1,0,0,1,0,0
+Increase Longevity of Products,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Make Good Use of Material,1,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0
+Lifetime Extension,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0
+Greenhouse Gas and CO2 Emission Reduction,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Air Quality Improvements,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0
+Pollution Reduction,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Greenhouse Gas Emissions Along a Building's Lifecycle,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Production of Thermal Energy from Waste Heat,0,1,0,1,0,0,0,0,0,0,1,0,0,1,0,0
+Pollution of Resource and Material Reduction,1,0,0,1,0,0,1,0,0,1,1,0,0,1,0,0
+Remanufacturing Practices,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+Extended Producer Responsibility (EPR) Initiatives,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+Material and Energy Conservation,0,1,0,1,0,0,0,0,0,1,1,0,0,1,0,0
+Resource-Efficient and Circular Material Life Cycles,0,0,1,1,0,0,0,0,0,1,1,0,0,0,0,0
+Remanufacturing Processes,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0
+Extended Producer Responsibility Initiatives,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0
+Renewable Energy Penetration,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Access to Electricity,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Circular Economy (CE) Innovation Budget,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0
+Renewable Energy Systems Penetration,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Efficient Use of Energy,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Grid Integration,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Energy Consumption,0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0
+Carbon Footprint and Greenhouse Gas Emissions,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0
+Flow of Emissions,0,0,0,1,0,0,1,0,0,0,1,0,0,0,0,0
+Carbon Storage and Sequestration in Vegetation and Soil,0,0,0,1,0,0,1,1,0,0,1,0,0,0,0,0
+Water Reduction in Production Processes,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Reduction in Potable Water Consumption,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Efficient Use of Water Resources,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Safe Water Accessibility,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Water Quality and Availability,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Grey-Water Reuse and Black-Water Recycling,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0
+Measurement of water consumption in residential settings.,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0
+"Water usage metrics in various sectors, such as transportation and industry.",0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0
+Strategies and practices that integrate water resource management with human and material resources.,1,0,0,0,1,0,0,0,1,1,0,0,0,1,0,0
+Initiatives and programs aimed at increasing engagement in water conservation efforts among individuals and organizations.,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Air Quality Assessment,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0
+Virgin Resources Used,0,0,0,0,0,0,0,0,1,1,0,0,0,0,1,0
+Biogas Utilization and Impact,0,0,0,0,0,0,0,1,0,0,1,0,0,0,1,0
+Ecological Restoration and Biodiversity Enhancement,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+Number of Projects Including Nature-Based Solutions,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+Amount of Financial Support to Implement Nature-Based Solutions,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+Habitat Restoration,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+Pollution Reduction Initiatives,0,0,1,0,0,0,1,1,0,0,1,0,0,0,0,0
+Carbon Management Practices,0,0,1,0,0,0,1,1,0,0,1,0,0,0,0,0
+Monetary Values of Each Vegetation Community Type,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Distribution of Public Green Space,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Amount of Pollutants Captured by Vegetation,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Adaptation of Green and Blue Infrastructure,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Restoration of Ecosystem Services,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Increase in Resilience to Climate Change,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0
+Adaptation and Resilience to Urban Climate Change,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0
+Urban Heat Island Effect Mitigation,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0
+Cost of Grey Infrastructure,0,0,1,0,0,0,0,1,0,0,0,0,1,0,0,0
+Eco-Innovation and Eco-Design,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0
+Life Cycle Assessment,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0
+Innovation in Environmental Technologies and Processes,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0
+Innovation in Sustainable Practices and Technologies,0,0,1,0,0,1,0,0,0,0,0,0,0,0,1,0
+Developing New Methods for Enhancing Urban Resilience and Sustainability,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0
