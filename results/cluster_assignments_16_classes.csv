@@ -1,0 +1,280 @@
+Indicator,Class 1,Class 2,Class 3,Class 4,Class 5,Class 6,Class 7,Class 8,Class 9,Class 10,Class 11,Class 12,Class 13,Class 14,Class 15,Class 16
+Flow of Waste and Waste Generation Rates,0,1,0,1,1,1,0,1,0,0,0,0,0,1,0,0
+Generation of Priority Waste Streams,1,1,1,0,0,0,0,0,1,1,0,0,1,1,1,0
+Minimization of Waste Production through Sustainable Materials,0,1,0,0,1,0,1,0,1,1,0,1,1,0,0,1
+Material Solid Waste Landfilled,0,1,0,1,1,0,1,0,0,0,0,0,1,1,1,0
+Household Waste Ending in Landfills,1,1,0,0,1,0,1,0,0,0,0,0,1,0,1,0
+Landfill Diversion Rates,0,1,0,1,0,1,0,1,0,1,0,0,0,1,1,0
+Material Solid Waste Incinerated,0,1,0,1,1,0,1,0,0,0,0,1,0,1,0,0
+Landfilled Waste Reduction Initiatives,0,1,1,1,0,0,1,0,0,0,0,1,0,0,1,1
+Waste Management Cost,1,1,0,0,0,0,1,1,1,0,1,0,1,0,1,0
+Recycled Water Volumes,1,1,0,1,0,0,1,1,1,1,0,0,0,0,1,0
+Optimal Reuse of Water,1,1,0,1,1,0,1,0,1,1,1,0,0,1,0,1
+Waste Reduction and Recycling Rates,0,1,0,1,1,1,0,1,0,0,0,0,0,1,0,0
+Waste Disposal into Fresh and Saltwater Bodies,0,1,0,1,1,0,1,0,1,1,0,0,1,1,0,0
+Recovery and Reuse of Water Resources,0,1,0,0,0,0,1,0,1,1,0,0,0,1,0,0
+"Amount of Waste Used in Households and Other Parts (e.g., Transportation)",0,1,0,1,1,0,1,0,1,0,0,0,1,1,0,0
+Reuse of Waste and Reduction of Resource Depletion,0,1,0,0,0,1,1,0,1,1,1,1,0,0,0,1
+Retrofitting Projects that Maximize Energy Efficiency and Minimize Waste,1,1,0,0,0,1,1,0,1,1,1,1,0,1,1,1
+Percentage of Food Waste Treated,1,1,0,1,0,1,1,0,1,0,0,0,1,0,1,0
+Flood Remediation Costs,0,1,0,1,0,0,1,0,0,1,1,1,0,0,1,0
+Chemical Remediation Costs,1,1,0,1,0,0,1,0,0,1,1,1,0,0,0,0
+Overall Recycling Rate,1,1,0,1,0,1,0,1,0,0,0,0,0,1,1,0
+Rate of Waste Materials Reused,1,1,0,0,0,0,1,0,1,0,0,0,1,1,1,0
+Local Wind Resource Potential,0,0,1,1,1,0,0,0,1,1,0,1,0,0,0,0
+Local Solar Resource Potential,0,0,1,1,1,0,0,1,1,1,0,1,0,0,1,0
+Local Green Resource Roofs,1,0,1,1,0,0,0,0,1,1,0,0,1,0,1,1
+Import/Export Balances resources,1,0,1,0,0,0,0,0,1,1,0,0,1,0,0,0
+Waste Reduction and Circular Processes,1,1,0,0,0,0,1,1,0,1,1,0,0,1,0,1
+Managing and Reducing Noise Pollution,1,1,0,0,1,0,0,0,0,1,1,1,1,0,0,1
+Pollution Reduction,1,1,0,1,0,0,0,1,0,1,0,1,0,0,0,1
+Mitigation of Environmental Impacts,0,1,0,1,0,0,0,0,0,1,1,1,1,0,0,1
+Reduction of Waste Production through Sustainable Materials,0,1,0,0,1,0,1,0,1,0,0,0,0,1,0,1
+Amount of Waste Produced in the City,1,1,0,1,0,0,1,0,1,0,0,0,1,1,1,0
+Recycling Materials and Rates,1,1,0,1,0,1,1,1,0,0,0,0,0,1,0,0
+Zero Material Waste Targets,1,1,0,1,0,0,1,0,0,0,1,0,1,0,1,0
+Amount or Percentage of Recycled Material,1,1,0,1,0,1,1,0,1,0,0,0,1,1,1,0
+Products Reused and Recovered,1,1,1,0,0,0,1,0,0,1,0,0,1,1,0,0
+Recycling of Non-Ferrous Metals,1,1,0,0,1,0,1,1,0,0,0,0,1,0,0,1
+Recycling Initiatives,1,1,1,1,1,0,1,1,0,0,0,0,0,0,1,0
+Lifecycle Management of Buildings and Materials,0,0,1,0,1,0,1,1,0,0,1,0,1,1,1,0
+Sustainable and Efficient Production and Consumption Patterns,1,1,1,0,0,1,0,0,1,0,0,1,0,0,0,1
+Use of Non-Virgin and Low-Carbon Footprint Materials,1,1,1,0,0,0,1,0,1,0,1,0,1,1,1,1
+Economic Value of Resource Use,0,0,0,1,0,1,0,0,1,1,0,0,0,0,0,1
+Reuse of Building Materials in New Constructions,0,0,0,0,0,0,1,0,0,1,0,0,1,1,1,0
+"Efficient Use of Resources, Materials, and Construction Techniques",1,0,1,0,1,0,1,0,1,1,1,0,1,1,1,1
+Techniques to Maximize the Effective Lifecycle of Buildings,1,0,1,0,0,0,0,0,0,0,1,1,0,1,0,1
+Measures to Improve Sustainability,1,0,1,1,0,0,0,0,0,0,0,1,0,1,1,1
+Green and Blue Infrastructure,1,0,1,0,1,0,1,0,1,0,0,0,1,0,1,1
+Use of New or Traditional Materials,1,0,1,1,1,0,1,0,0,1,0,0,0,1,0,1
+Eco-Design Practices,1,0,0,0,1,0,1,1,0,0,0,0,1,0,0,1
+Sharing and Collaborative Consumption Strategies,1,0,1,0,0,1,0,0,1,0,1,0,0,0,0,1
+Resource Consumption,1,0,1,1,0,0,0,1,1,1,0,0,1,0,0,1
+"Flow of Materials, Energy, and Resources",0,1,1,0,0,0,1,1,1,0,1,0,0,1,0,0
+Amount of Raw Materials Used,0,0,0,1,0,0,1,0,1,0,1,0,0,1,0,0
+Virgin Material Use,1,1,0,0,1,0,1,0,1,0,1,0,1,1,0,0
+Fossil Fuel Consumption,1,1,0,0,1,1,1,1,1,0,0,1,0,0,0,0
+Average Amount of Raw Material Retained in the Cycle per Citizen per Year,0,1,0,1,0,1,0,0,1,0,0,1,1,1,0,0
+Reduction of Toxic Emissions,1,1,0,0,0,0,0,0,0,0,0,1,1,0,0,1
+Energy Generated During Waste Treatment and Reused,0,1,1,0,0,0,1,1,1,0,0,0,1,0,1,0
+"Resource Efficiency (Labor, Material Inputs, or Energy)",1,0,0,0,0,1,1,1,1,0,1,0,1,1,0,0
+Reducing Non-Renewable Resources,1,1,1,0,0,0,0,0,1,1,0,0,1,1,0,1
+Reuse of Waste and Reduction of Resource Depletion,0,1,0,0,0,1,1,0,1,1,1,1,0,0,0,1
+Renewable-Energy Systems and Efficient Use of Energy,1,0,1,0,1,0,0,0,1,0,1,0,0,1,0,1
+Control of Organic Matter from Waste,0,1,0,1,0,0,1,1,0,1,0,1,0,0,0,1
+Material Consumption Reduction,1,1,0,1,0,0,1,1,1,0,1,1,1,0,0,1
+Use of Local Materials and Secondary Raw Materials,0,1,1,0,1,0,1,0,1,0,1,0,0,1,0,0
+Resource-Efficient and Circular Material Life Cycles,0,0,0,0,1,0,0,1,0,1,0,1,0,1,0,1
+Increasing Durability of Products,1,0,0,0,0,1,0,1,1,0,1,1,0,0,1,1
+Redesign for Reuse and Recycling of Products,1,1,1,0,0,0,1,0,0,1,1,0,0,1,0,1
+Prolonging the Lifespan of Products,1,0,0,0,0,1,1,0,0,1,1,1,0,1,0,1
+Lifetime Extension Practices,1,0,1,0,0,0,1,1,0,1,1,0,1,0,0,0
+Focus on Locally Produced Food,1,0,1,0,1,1,1,0,1,1,0,0,0,0,0,0
+Refurbishment and Recycling of Products,1,1,1,0,1,0,1,1,0,0,0,0,1,0,0,0
+Remanufacturing Processes Involving Water Use,0,1,0,0,0,0,1,0,0,1,1,1,0,1,0,0
+Community-Based Recycling Initiatives,1,1,1,1,1,0,1,1,0,0,0,0,0,0,1,0
+local Recycling Rate,1,1,0,1,1,1,1,1,0,0,0,0,0,1,1,0
+Thermal Hydrolysis,1,1,0,0,1,0,1,1,0,0,1,1,0,0,0,0
+Increase Longevity of Products,1,0,0,1,0,1,0,1,0,0,1,0,0,1,0,1
+Make Good Use of Material,1,0,0,1,0,0,1,0,1,0,1,0,0,1,0,1
+Lifetime Extension,1,0,1,1,1,0,1,1,0,1,0,1,1,1,0,0
+Greenhouse Gas and CO2 Emission Reduction,0,1,0,1,0,1,0,1,1,0,0,1,0,0,0,1
+Air Quality Improvements,1,1,0,1,0,0,0,1,0,1,1,0,1,0,1,1
+Pollution Reduction,1,1,0,1,0,0,0,1,0,1,0,1,0,0,0,1
+Greenhouse Gas Emissions Along a Building's Lifecycle,0,1,0,1,0,0,0,1,0,0,0,1,1,1,0,1
+Production of Thermal Energy from Waste Heat,0,1,0,0,1,0,1,1,1,0,1,0,0,1,0,0
+Pollution of Resource and Material Reduction,0,1,0,1,0,0,0,1,1,1,0,1,1,0,0,1
+Remanufacturing Practices,0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0
+Extended Producer Responsibility (EPR) Initiatives,1,1,1,0,0,1,0,0,0,1,0,1,1,0,0,1
+Material and Energy Conservation,0,1,0,1,0,0,1,1,1,1,0,0,0,0,0,1
+Resource-Efficient and Circular Material Life Cycles,0,0,0,0,1,0,0,1,0,1,0,1,0,1,0,1
+Remanufacturing Processes,0,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0
+Extended Producer Responsibility Initiatives,1,1,1,0,0,1,0,0,0,1,0,0,1,0,0,1
+Renewable Energy Penetration,0,0,1,0,0,0,1,1,1,0,0,1,0,0,1,1
+Access to Electricity,1,0,0,1,1,0,1,0,1,0,0,1,0,0,0,0
+Circular Economy (CE) Innovation Budget,1,1,1,0,0,1,0,1,1,0,0,0,1,1,0,1
+Renewable Energy Systems Penetration,0,0,1,0,0,0,1,1,1,0,0,1,0,0,1,1
+Efficient Use of Energy,1,0,0,0,1,0,0,0,1,0,1,0,0,1,1,1
+Grid Integration,1,0,1,0,0,0,1,1,1,0,1,0,0,0,1,0
+Energy Consumption,1,0,0,1,1,0,1,1,1,0,0,1,0,0,0,0
+Carbon Footprint and Greenhouse Gas Emissions,0,1,0,1,0,0,0,0,1,0,0,1,0,0,0,1
+Carbon Storage and Sequestration in Vegetation and Soil,0,1,0,0,1,0,1,0,1,1,0,1,1,0,0,0
+Flow of Emissions,1,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0
+Material Flow Analysis (MFA),1,1,1,0,0,0,1,1,0,1,1,0,1,0,1,0
+Renewable Energy Usage,0,0,1,1,0,0,1,1,1,0,0,1,0,0,1,1
+Resource Efficiency and Productivity,1,0,1,0,0,1,0,1,1,0,1,0,0,0,0,1
+Total Raw Material Productivity,0,0,0,1,0,1,1,1,1,0,1,0,0,1,0,0
+Water Reduction in Production Processes,0,1,1,0,0,0,1,1,1,1,0,0,0,1,0,0
+Reduction in Potable Water Consumption,0,1,0,1,1,0,0,0,1,1,0,1,0,0,0,0
+Efficient Use of Water Resources,0,0,0,1,1,0,0,0,1,1,0,0,0,1,0,0
+Safe Water Accessibility,1,0,0,1,1,0,0,0,1,1,1,0,0,0,1,1
+Water Quality and Availability,0,0,0,1,1,0,0,1,1,1,0,0,0,0,0,0
+Grey-Water Reuse and Black-Water Recycling,1,1,0,0,1,0,1,0,1,1,0,0,0,0,1,1
+Amount of Water Used in Houses,1,0,0,1,1,0,1,0,1,1,0,0,1,1,0,0
+Amount of Water Used in Other Sectors,0,1,0,1,0,0,1,0,1,1,0,0,1,1,0,0
+Integration of Water Resource Management with Human and Material Potential,0,0,1,0,0,0,0,1,1,1,1,0,1,0,0,0
+Strategies to Enhance Material and Human Engagement in Water Conservation,0,0,1,1,0,0,0,0,1,1,0,0,1,1,0,1
+Protecting the Natural Environment and Regenerating Natural Systems,0,0,0,0,1,0,0,0,0,1,0,1,0,1,0,1
+Air Quality Assessment,0,1,0,1,0,0,0,1,0,1,1,1,1,0,1,0
+Virgin Resources Used,1,0,1,0,1,0,1,0,1,1,0,0,1,0,0,0
+Biogas Utilization and Impact,1,1,0,0,0,0,0,1,1,1,1,1,1,0,0,0
+Ecological Restoration and Biodiversity Enhancement,0,0,0,1,1,0,0,1,0,1,0,0,0,0,1,1
+Number of Projects Including Nature-Based Solutions,1,0,1,0,0,0,0,0,0,0,1,0,1,1,1,0
+Amount of Financial Support to Implement Nature-Based Solutions,1,0,1,1,0,1,0,0,1,1,1,0,0,1,0,0
+Habitat Restoration,0,0,0,1,1,0,1,1,0,1,0,0,0,0,0,0
+Pollution Reduction Initiatives,1,1,1,1,0,0,0,0,0,1,0,1,0,0,1,1
+Carbon Management Practices,1,1,1,0,0,0,1,1,0,0,1,1,1,0,0,1
+Monetary Values of Each Vegetation Community Type,0,0,0,1,0,1,0,1,1,1,0,0,1,1,1,0
+Distribution of Public Green Space,0,0,0,0,1,0,0,1,0,1,0,0,0,1,1,0
+Amount of Pollutants Captured by Vegetation,0,1,0,1,0,0,1,0,0,1,0,1,0,1,0,0
+Adaptation of Green and Blue Infrastructure,1,0,1,0,1,0,0,0,1,0,0,0,1,0,1,1
+Restoration of Ecosystem Services,1,0,1,1,1,0,0,1,1,1,0,0,1,0,0,0
+Increase in Resilience to Climate Change,0,0,0,1,0,1,0,0,0,1,1,1,0,1,0,1
+Adaptation and Resilience to Urban Climate Change,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,1
+Urban Heat Island Effect Mitigation,1,1,0,0,0,0,0,0,0,1,1,1,1,0,0,1
+Cost of Grey Infrastructure,1,1,1,0,0,0,0,0,1,0,0,0,1,0,1,1
+Eco-Innovation and Eco-Design,1,0,0,0,1,0,0,1,0,1,0,1,0,0,0,0
+Life Cycle Assessment,1,0,1,0,0,0,0,1,0,1,1,1,0,0,0,0
+Innovation in Environmental Technologies and Processes,0,0,1,0,0,0,1,1,0,1,0,0,0,1,0,1
+Innovation in Sustainable Practices and Technologies,0,0,1,0,1,1,1,1,0,0,0,1,0,0,0,1
+Developing New Methods for Enhancing Urban Resilience and Sustainability,0,0,1,0,0,1,0,0,0,1,1,1,0,1,1,1
+E-Government Initiatives,1,0,1,0,0,0,1,1,0,1,0,0,1,0,0,0
+Enforcement of Environmental Regulations,0,1,0,1,1,0,1,1,0,1,0,0,1,0,0,1
+Transparent Governance,1,0,1,1,1,0,0,1,0,0,0,0,0,0,0,1
+"Public Forums, Community Decision-Making Processes",1,0,1,0,1,1,0,0,0,1,1,0,1,1,0,1
+"Specialized Supporting Services (Financial, Knowledge, IT, R&D, etc.)",1,0,1,0,1,1,1,0,0,1,1,0,1,1,0,0
+Public Utilities and Transport Services Management,0,1,1,0,1,0,0,1,1,0,1,0,1,0,1,0
+Grants from Local and National Governments for Symbiosis Activities,1,0,1,0,1,1,1,0,0,1,1,1,1,0,1,0
+Cost of Materials Used in Buildings,1,0,0,0,0,0,1,0,1,0,1,0,1,1,1,0
+Waste Collection Costs,1,1,0,1,0,0,1,1,1,0,0,0,1,0,1,0
+Demolition and Construction Management Costs,0,1,0,0,0,0,1,1,0,1,1,0,1,1,1,0
+Impact of Urban Symbiosis Projects,1,0,1,0,0,1,0,0,0,1,1,1,0,0,1,1
+"nergy Recovered from Urban Water, Sewage, and Waste",0,1,1,0,1,0,1,0,1,1,0,0,1,1,1,0
+"ircular Economy Policies at City, Regional, and National Levels",0,1,1,0,1,1,0,1,0,1,0,0,1,1,0,0
+Incentives to Enhance Circular Economy Transformation,1,0,1,0,0,1,0,1,0,1,0,0,0,1,0,1
+R&D Expenditure,1,0,0,1,1,1,1,0,1,0,0,0,1,0,0,1
+Patents Related to Circular Economy Technologies and Processes,1,1,1,0,0,1,1,1,0,1,0,0,1,1,0,0
+Integration of IoT and AI in CE Initiatives,0,0,1,0,0,0,0,0,0,0,1,1,0,1,0,0
+Digital Tools and GIS Applications Integration,1,0,1,0,0,1,1,0,0,1,1,0,0,0,0,0
+Smart City and Technology Enhancements,1,0,1,0,0,0,0,1,0,0,1,1,0,0,1,1
+Regenerative and Systems Thinking to Promote Long-Term Sustainability,1,0,0,0,0,0,0,0,0,1,1,1,0,1,1,1
+Public Awareness Campaigns,1,0,1,1,1,1,1,0,0,0,0,0,0,1,0,1
+Community Participation Rates in CE Programs,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,0
+Nature-Based Solution Adoption and Establishment of New Communities,1,0,1,0,0,1,0,0,0,1,0,0,1,1,0,1
+Social Innovation and Entrepreneurship,0,0,1,0,0,1,1,1,0,0,0,0,0,0,0,1
+Balance Between Women & Men ,1,0,0,0,1,0,1,0,0,0,0,0,1,1,0,1
+Heaviest Age Group ,1,0,0,1,1,1,1,0,0,0,0,1,1,1,0,0
+Social Equity Level in Low-Income Groups,1,0,1,1,0,1,0,1,0,0,0,0,1,0,0,1
+Active Population ,1,0,0,1,1,1,0,1,0,1,0,0,1,1,0,0
+"Promoting Social Equity, Justice, and Human Rights",0,0,0,1,1,1,0,0,0,0,0,0,1,0,0,1
+Social Capital and Social Well-being,1,0,0,0,0,1,0,1,0,0,0,0,1,0,1,1
+Healthcare Access and Quality,0,0,1,1,1,0,0,1,1,0,1,0,1,0,0,1
+Fare Accessibility to Services: ,1,0,0,1,1,0,0,0,0,0,1,0,0,0,1,0
+Social Inclusion and Cultural Dimension,1,0,1,1,1,1,0,1,0,0,0,0,1,0,0,1
+Crime Rates and Safety,1,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0
+Citizen Behavior Toward Sustainable Practices,0,0,1,1,0,1,0,0,0,0,1,0,0,0,1,1
+Education Quality and Accessibility,0,0,1,1,1,1,0,0,1,0,1,0,1,0,0,1
+Training opportunities programs,1,0,1,1,0,1,1,0,0,1,0,0,1,0,0,0
+community awareness and education on circular practices,1,0,1,0,1,1,0,0,0,1,1,0,1,0,0,1
+Percentage of Space for Ecosystems (Urban Farming) in Spatial Planning,0,0,0,0,1,0,0,1,1,1,0,0,1,0,1,0
+Urban Regeneration and Land Use Efficiency,0,0,0,0,0,1,0,1,1,1,0,1,0,0,1,1
+"Close Linkage to Use of Resources (e.g., Built Environment and Infrastructures)",1,0,1,0,1,0,0,0,1,1,1,0,1,1,0,1
+Number of Projects/Solutions that Reduce Material Consumption and Improve Sustainability,1,1,0,0,0,1,0,0,1,0,0,1,0,1,0,1
+Resource Sufficiency and Conservation Efforts,0,0,1,1,0,1,0,0,1,1,1,0,0,0,0,1
+Access to Affordable Housing,0,0,1,1,1,0,1,0,0,0,0,0,0,0,1,1
+Housing Deficiency,1,1,0,0,0,1,1,1,0,0,0,0,1,0,1,1
+Percentage of Inhabitants,1,0,0,1,0,0,0,0,0,1,0,1,1,1,1,0
+Building Footprint,1,0,0,0,0,0,1,1,0,0,0,0,1,1,1,0
+Co-building; Cohousing & Cooperative Housing,1,0,1,1,1,1,1,1,0,1,1,0,0,0,1,0
+Lifecycle of the Building,1,0,1,0,1,0,0,1,0,0,1,1,0,1,0,1
+Production of Public Spaces as Places:,0,0,1,0,1,1,1,1,0,0,0,0,1,1,1,0
+Activation of Vacant and Unused Spaces,1,0,0,0,0,1,1,0,0,1,0,0,1,1,1,0
+Healthy and Comfortable Spaces,1,0,0,0,1,1,0,0,0,1,1,0,1,0,1,1
+Quality of Public Spaces in Terms of Attractiveness,0,0,0,1,1,0,0,0,0,0,1,0,1,1,1,0
+"Sustainable Urban Design Promoting Renewable Energy, Green Spaces, and Pedestrian-Friendly Streets",0,0,0,0,1,0,1,0,0,0,0,1,0,0,1,1
+Built Flexible Environments and Smart Building Sustainable Technologies,0,0,1,0,1,0,0,0,1,0,0,1,1,1,1,1
+Urbanization Process Pattern,0,0,0,0,0,1,0,1,0,1,0,1,0,1,1,0
+Health Urban Ecology,0,0,0,0,1,0,0,1,1,1,0,0,1,0,1,1
+Regenerate and Renovate Existing Structures and Spaces,1,0,0,0,0,0,1,0,0,1,1,1,0,1,1,1
+Number of Buildings and Spaces Reused for New Functions,1,0,0,0,0,0,1,0,0,1,0,0,1,1,1,0
+Recovery of Abandoned Areas and Adaptation of Existing Infrastructure,0,1,1,0,0,0,1,0,1,1,0,0,1,1,1,0
+Control Ecological Footprint of Cities,1,1,1,1,0,0,0,0,1,1,0,0,1,0,1,1
+Percentage of Space for (Peri) Urban Farming in Spatial Planning,0,0,0,0,1,1,0,0,1,1,0,0,1,1,1,0
+Food Security Measures and Strategies,1,1,1,0,0,1,0,1,1,1,1,0,1,0,0,1
+Green Growth Indicators,1,0,0,1,0,1,0,1,1,1,0,0,1,0,1,1
+Local Self-Sufficiency,1,0,1,1,1,0,1,1,1,0,0,0,1,0,0,0
+Green Infrastructure,0,0,1,1,1,0,1,1,1,0,0,0,0,0,1,1
+"Number of Urban Farms, Rooftop Gardens, Community Gardens, and Farmers' Markets",0,0,1,0,1,1,0,0,0,1,0,0,0,1,1,0
+Parks and Accessible Pathways,1,0,1,1,1,0,0,0,0,1,0,0,0,1,1,0
+Enhancing Urban Green Spaces,0,0,0,1,1,0,0,1,0,1,0,1,0,0,1,1
+Percentage of Green Spaces Buildings,1,0,0,1,1,1,1,0,0,0,0,0,1,1,1,1
+Use of Recycled and Reusable Materials in Construction,0,1,0,0,0,0,1,0,0,0,1,1,0,1,1,1
+Integration of Nature-Based Solutions,1,0,1,0,0,0,0,1,0,0,1,0,1,1,0,0
+Biodiversity Diversification,0,0,1,0,1,1,0,1,0,1,0,1,1,0,0,1
+Strategies for Enhancing Urban Green Coverage and Ecosystem Connectivity,1,0,1,0,0,0,0,0,1,1,0,1,1,0,1,1
+Evaluate Pattern of Forests and Wetlands,1,1,1,0,0,0,0,1,0,1,0,0,1,0,1,0
+Public Transport Usage and Electrical Energy Use in Transportation,0,0,0,0,1,0,1,0,1,0,0,0,0,1,1,0
+"Transportation Modes such as Public Transit, Biking, and Walking",1,0,0,0,1,0,0,0,1,0,0,0,0,0,1,0
+Reduction of Reliance on Single-Occupancy Vehicles and Enhancing Urban Mobility,1,0,0,0,1,1,0,0,1,0,0,1,0,1,1,1
+Development of Local Networks and ICT Infrastructure: ,0,0,1,0,1,0,0,1,1,1,0,1,1,1,0,0
+Public Transport Links and Accessibility to Public Services,0,0,1,0,1,0,0,0,1,0,0,0,0,0,1,0
+Percentage of Road Network Dedicated to Pedestrian Use,0,0,0,1,1,0,0,0,1,1,0,0,1,0,1,0
+Cycling Infrastructure,0,0,1,1,1,0,1,1,1,0,0,0,0,0,1,0
+Electric Vehicles,1,0,1,0,1,0,1,1,1,0,0,1,0,1,0,0
+Walking Distance to Nearest Facilities,1,0,0,1,1,0,0,0,0,0,0,1,0,1,0,0
+Economic Value of Property and Land,0,0,0,0,1,1,1,1,1,1,0,0,1,1,1,0
+Incentives for Green Businesses,1,0,1,0,0,0,1,0,1,0,0,0,1,0,1,1
+Improve Level of Sustainable Supply Chains,0,1,1,1,0,0,0,0,1,0,0,1,0,1,0,1
+Design Activity as a Service Model,1,0,1,0,0,1,0,0,1,0,1,0,1,1,0,0
+Design New Commercial Activities,1,0,1,0,0,0,1,1,0,1,0,0,1,1,1,0
+Level of Export and Import of Goods and Products,1,1,1,0,1,1,1,0,1,1,0,0,1,1,0,0
+Investments in the Recycling Process,1,1,1,0,0,1,1,1,0,1,0,0,0,1,0,0
+Industry Development Level,0,1,1,1,0,1,1,1,0,0,0,0,1,1,0,0
+Average Income and Equality Among Low-Income Groups,1,0,0,1,0,1,0,1,0,0,0,0,1,1,0,0
+Adoption rates of circular products and services,1,1,1,0,0,1,0,0,0,0,1,0,1,1,0,0
+economic growth linked to CE activities,1,0,1,0,0,1,0,1,1,1,0,1,1,0,0,0
+level of local jobs at all skill levels,1,0,1,1,0,1,1,0,0,0,1,0,1,1,0,0
+Job creation through circular economy practices,1,0,1,0,0,1,1,1,0,1,0,0,1,0,0,1
+revenue generated from circular products and services,1,1,1,0,0,1,1,0,0,0,0,0,1,1,0,0
+Product lifespan and durability,1,0,0,1,0,1,0,0,1,0,1,1,0,0,0,1
+Engagement with local industries and startups,1,0,1,0,0,1,1,0,0,0,0,0,1,0,0,1
+promoting community and public participation in circular practices,1,1,1,0,1,1,0,0,0,0,1,0,1,0,1,1
+"investment in local and global market integration, enhancement of local markets",0,0,1,0,0,1,1,0,1,1,1,0,0,0,0,1
+"GHG emissions (e.g., CO2, methane), Energy consumption per unit of production, Water usage and water stress levels, Waste generation and recycling rates, Biodiversity indices and species diversity",0,1,0,0,1,1,0,0,1,1,0,1,1,1,0,0
+"Emissions levels, Waste diversion rates, Recycling rates, Hazardous waste management, Noise pollution levels",0,1,0,0,1,1,0,0,0,1,0,0,1,1,0,0
+"GHG emissions reduction targets, Renewable energy adoption, Climate adaptation plans, Carbon offset projects",0,1,1,0,0,1,0,0,1,1,0,1,0,0,0,1
+"Protected areas, Species richness, Habitat restoration projects, Ecosystem services valuation",0,0,1,1,0,1,0,0,0,1,0,0,1,0,1,0
+"Land use efficiency, Urban sprawl control, Brownfield redevelopment, Green infrastructure",0,0,0,0,0,1,0,0,1,1,1,1,1,0,1,1
+"Water quality, Water recycling rates, Rainwater harvesting, Aquifer recharge initiatives",0,1,0,0,1,1,0,0,1,1,1,0,0,0,0,0
+"Particulate matter concentration, NOx and SOx levels, Air quality monitoring systems, Public health impacts",0,1,0,1,1,1,0,0,0,0,1,1,1,0,1,0
+"Worker rights policies, Child labor incidence, Workplace safety standards, Human rights training",0,1,0,1,1,1,0,0,0,0,1,0,1,0,0,1
+"Community participation in planning, Local advisory councils, Public consultations, Community investment projects",0,1,1,0,1,1,0,0,0,1,1,0,0,0,1,0
+"Occupational health standards, Public health services, Disease prevention programs, Mental health support",0,1,0,1,1,1,0,0,0,0,1,0,1,0,0,1
+"School enrollment rates, Literacy rates, Vocational training programs, Lifelong learning opportunities",0,0,1,1,1,1,1,0,0,0,0,1,0,0,0,0
+"Income equality metrics, Poverty reduction programs, Access to basic services, Anti-discrimination policies",0,1,1,1,0,1,0,0,0,0,0,0,1,0,0,1
+"Conservation of historical sites, Promotion of local arts and culture, Heritage education programs",0,0,1,0,1,1,1,0,0,1,0,0,1,0,1,0
+"Affordable housing availability, Homelessness rates, Housing quality standards, Urban renewal projects",0,1,0,1,1,1,0,0,0,1,1,0,1,0,1,0
+"Revenue growth, Profit margins, Return on investment, Economic value generated",0,0,0,0,0,1,1,1,1,1,1,0,0,1,0,1
+"R&D spending, Patents filed, Infrastructure quality, Technological advancements",0,0,1,0,1,1,1,0,0,1,0,0,1,1,1,1
+"Market share, Customer satisfaction, Brand reputation, Competitive analysis",0,0,0,0,1,1,0,0,0,1,1,0,1,0,0,1
+"Ethical sourcing policies, Supplier diversity, Fair trade practices, Supply chain transparency",0,1,0,0,1,1,0,0,0,0,1,0,1,0,0,1
+"Economic diversification, Crisis management plans, Financial stability measures",0,1,1,0,0,1,0,1,0,1,0,0,1,0,0,1
+"GDP growth, Employment rates, Investment levels, Economic forecasting",0,0,0,1,0,1,0,1,1,0,0,1,1,1,0,0
+"Sustainable product design, Consumer awareness campaigns, Circular economy practices",1,1,1,0,1,1,0,0,0,1,1,0,0,0,0,1
+"Unemployment rates, Job satisfaction, Wages and benefits, Worker productivity",0,0,0,0,0,1,0,1,1,0,0,0,1,1,0,1
+PM 2.5 Levels,1,1,1,0,1,0,0,0,0,0,0,0,1,0,0,0
+Water Usage Efficiency,1,0,0,1,0,0,0,1,1,1,1,0,0,0,1,0
+Species at Risk,1,0,1,0,0,1,1,1,0,0,1,0,1,0,0,0
+Crop Rotation Adherence,1,0,0,0,0,1,1,1,0,1,0,0,0,0,0,0
+Renewable Energy Share,1,0,1,0,0,0,0,1,1,0,0,1,1,0,1,1
+School Enrollment Rates,1,0,0,1,1,1,0,1,0,0,0,0,0,1,0,0
+Doctor to Patient Ratio,1,0,0,1,1,1,0,0,0,0,1,0,1,1,0,0
+Workplace Accidents,1,0,1,0,1,0,1,1,0,0,0,1,1,0,0,0
+Community Initiative Participation,1,0,1,1,1,1,0,0,0,0,0,0,0,0,1,1
+Diversity Indices,1,0,1,1,0,1,0,1,0,0,0,0,1,0,0,1
+GDP Per Capita,1,0,0,1,0,1,1,0,1,0,0,1,1,0,0,0
+Banking Penetration,1,0,1,0,0,1,1,1,1,0,0,0,1,0,0,0
+Trade Balance,1,0,1,1,0,1,1,1,1,1,0,0,1,0,0,0
+Recovery Index,1,1,1,0,0,1,0,1,1,1,0,0,1,0,0,0
+Compliance Rates,1,1,1,1,0,1,0,1,0,0,0,0,1,1,0,0
+Foreign Direct Investment,0,0,1,1,1,1,1,1,0,0,0,1,0,0,0,0

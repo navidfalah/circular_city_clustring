@@ -14,13 +14,28 @@ from gensim.models import Word2Vec, Doc2Vec
 from gensim.models.doc2vec import TaggedDocument
 from nltk.tokenize import word_tokenize
 import nltk
+from matplotlib_venn import venn3
+
+# Ensure NLTK downloads 'punkt' if not already done
 nltk.download('punkt')
 
 # Load the data
 df = pd.read_csv("indicators.csv")
 
+# Load the additional labeled data
+labeled_df = pd.read_csv("features.csv")
+
+# Combine the labeled data with the original data
+combined_df = pd.concat([df, labeled_df], ignore_index=True)
+
+# Remove rows with NaN values in the 'Indicator' column
+combined_df = combined_df.dropna(subset=['Indicator'])
+
+# Alternatively, you could fill NaN values with a placeholder string:
+# combined_df['Indicator'] = combined_df['Indicator'].fillna("No indicator")
+
 # Preprocess the text data
-documents = df["Indicator"]
+documents = combined_df["Indicator"]
 
 # TF-IDF Vectorization
 tfidf_vectorizer = TfidfVectorizer(max_features=1000, stop_words='english')
@@ -50,22 +65,12 @@ tagged_data = [TaggedDocument(words=word_tokenize(doc.lower()), tags=[str(i)]) f
 doc2vec_model = Doc2Vec(tagged_data, vector_size=100, window=5, min_count=1, workers=4)
 
 # Define the target variables
-y_economic = df["Economic"].fillna(0)
-y_environmental = df["Environmental"].fillna(0)
-y_social = df["Social"].fillna(0)
-
-# Train-test split for each feature extraction method
-X_train_tfidf, X_test_tfidf, y_train_tfidf, y_test_tfidf = train_test_split(X_tfidf, y_economic, test_size=0.2, random_state=42)
-X_train_lda, X_test_lda, y_train_lda, y_test_lda = train_test_split(X_lda, y_economic, test_size=0.2, random_state=42)
-X_train_bert, X_test_bert, y_train_bert, y_test_bert = train_test_split(embeddings, y_economic, test_size=0.2, random_state=42)
-X_train_word2vec, X_test_word2vec, y_train_word2vec, y_test_word2vec = train_test_split(
-    np.array([np.mean([word2vec_model.wv[word] for word in doc], axis=0) for doc in tokenized_docs]),
-    y_economic, test_size=0.2, random_state=42)
-X_train_doc2vec = np.array([doc2vec_model.dv[i] for i in range(len(documents))])
-X_train_doc2vec, X_test_doc2vec, y_train_doc2vec, y_test_doc2vec = train_test_split(X_train_doc2vec, y_economic, test_size=0.2, random_state=42)
+y_economic = combined_df["Economic"].fillna(0)
+y_environmental = combined_df["Environmental"].fillna(0)
+y_social = combined_df["Social"].fillna(0)
 
 # Function to train and evaluate models
-def train_and_evaluate_models(X_train, X_test, y_train, y_test, label):
+def train_and_evaluate_models(X, y, label):
     # Initialize models
     models = {
         "Logistic Regression": LogisticRegression(max_iter=1000),
@@ -77,6 +82,7 @@ def train_and_evaluate_models(X_train, X_test, y_train, y_test, label):
 
     # Train and evaluate each model
     for model_name, model in models.items():
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
         model.fit(X_train, y_train)
         y_pred = model.predict(X_test)
         y_proba = model.predict_proba(X_test)[:, 1]
@@ -108,92 +114,109 @@ def train_and_evaluate_models(X_train, X_test, y_train, y_test, label):
 
     return results
 
-# Evaluate models for TF-IDF features
+# Evaluate models for each feature extraction method
 print("===== TF-IDF Features =====")
-tfidf_results = train_and_evaluate_models(X_train_tfidf, X_test_tfidf, y_train_tfidf, y_test_tfidf, "TF-IDF")
-for model, metrics in tfidf_results.items():
-    print(f"Model: {model}")
-    print(f"  Accuracy: {metrics['Accuracy']:.4f}")
-    print(f"  F1 Score: {metrics['F1 Score']:.4f}")
-    print(f"  Precision: {metrics['Precision']:.4f}")
-    print(f"  Recall: {metrics['Recall']:.4f}")
-    print(f"  ROC AUC: {metrics['ROC AUC']:.4f}")
-    plt.plot(metrics['FPR'], metrics['TPR'], label=f'{model} (area = {metrics["ROC AUC"]:.2f})')
+tfidf_results = train_and_evaluate_models(X_tfidf, y_economic, "TF-IDF")
 
-plt.title('ROC Curve for TF-IDF Features')
-plt.xlabel('False Positive Rate')
-plt.ylabel('True Positive Rate')
-plt.legend(loc="lower right")
-plt.show()
-
-# Evaluate models for LDA features
 print("===== LDA Features =====")
-lda_results = train_and_evaluate_models(X_train_lda, X_test_lda, y_train_lda, y_test_lda, "LDA")
-for model, metrics in lda_results.items():
-    print(f"Model: {model}")
-    print(f"  Accuracy: {metrics['Accuracy']:.4f}")
-    print(f"  F1 Score: {metrics['F1 Score']:.4f}")
-    print(f"  Precision: {metrics['Precision']:.4f}")
-    print(f"  Recall: {metrics['Recall']:.4f}")
-    print(f"  ROC AUC: {metrics['ROC AUC']:.4f}")
-    plt.plot(metrics['FPR'], metrics['TPR'], label=f'{model} (area = {metrics["ROC AUC"]:.2f})')
+lda_results = train_and_evaluate_models(X_lda, y_economic, "LDA")
 
-plt.title('ROC Curve for LDA Features')
-plt.xlabel('False Positive Rate')
-plt.ylabel('True Positive Rate')
-plt.legend(loc="lower right")
-plt.show()
-
-# Evaluate models for BERT embeddings
 print("===== BERT Embeddings =====")
-bert_results = train_and_evaluate_models(X_train_bert, X_test_bert, y_train_bert, y_test_bert, "BERT")
-for model, metrics in bert_results.items():
-    print(f"Model: {model}")
-    print(f"  Accuracy: {metrics['Accuracy']:.4f}")
-    print(f"  F1 Score: {metrics['F1 Score']:.4f}")
-    print(f"  Precision: {metrics['Precision']:.4f}")
-    print(f"  Recall: {metrics['Recall']:.4f}")
-    print(f"  ROC AUC: {metrics['ROC AUC']:.4f}")
-    plt.plot(metrics['FPR'], metrics['TPR'], label=f'{model} (area = {metrics["ROC AUC"]:.2f})')
+bert_results = train_and_evaluate_models(embeddings, y_economic, "BERT")
 
-plt.title('ROC Curve for BERT Embeddings')
-plt.xlabel('False Positive Rate')
-plt.ylabel('True Positive Rate')
-plt.legend(loc="lower right")
-plt.show()
-
-# Evaluate models for Word2Vec embeddings
 print("===== Word2Vec Embeddings =====")
-word2vec_results = train_and_evaluate_models(X_train_word2vec, X_test_word2vec, y_train_word2vec, y_test_word2vec, "Word2Vec")
-for model, metrics in word2vec_results.items():
-    print(f"Model: {model}")
-    print(f"  Accuracy: {metrics['Accuracy']:.4f}")
-    print(f"  F1 Score: {metrics['F1 Score']:.4f}")
-    print(f"  Precision: {metrics['Precision']:.4f}")
-    print(f"  Recall: {metrics['Recall']:.4f}")
-    print(f"  ROC AUC: {metrics['ROC AUC']:.4f}")
-    plt.plot(metrics['FPR'], metrics['TPR'], label=f'{model} (area = {metrics["ROC AUC"]:.2f})')
+word2vec_results = train_and_evaluate_models(
+    np.array([np.mean([word2vec_model.wv[word] for word in doc], axis=0) for doc in tokenized_docs]),
+    y_economic, "Word2Vec")
 
-plt.title('ROC Curve for Word2Vec Embeddings')
-plt.xlabel('False Positive Rate')
-plt.ylabel('True Positive Rate')
-plt.legend(loc="lower right")
-plt.show()
-
-# Evaluate models for Doc2Vec embeddings
 print("===== Doc2Vec Embeddings =====")
-doc2vec_results = train_and_evaluate_models(X_train_doc2vec, X_test_doc2vec, y_train_doc2vec, y_test_doc2vec, "Doc2Vec")
-for model, metrics in doc2vec_results.items():
-    print(f"Model: {model}")
-    print(f"  Accuracy: {metrics['Accuracy']:.4f}")
-    print(f"  F1 Score: {metrics['F1 Score']:.4f}")
-    print(f"  Precision: {metrics['Precision']:.4f}")
-    print(f"  Recall: {metrics['Recall']:.4f}")
-    print(f"  ROC AUC: {metrics['ROC AUC']:.4f}")
-    plt.plot(metrics['FPR'], metrics['TPR'], label=f'{model} (area = {metrics["ROC AUC"]:.2f})')
+doc2vec_results = train_and_evaluate_models(
+    np.array([doc2vec_model.dv[i] for i in range(len(documents))]),
+    y_economic, "Doc2Vec")
 
-plt.title('ROC Curve for Doc2Vec Embeddings')
-plt.xlabel('False Positive Rate')
-plt.ylabel('True Positive Rate')
-plt.legend(loc="lower right")
+# Function to find the best model
+def find_best_model(results_dict):
+    best_model = None
+    best_score = 0
+    best_feature = None
+    
+    for feature, models in results_dict.items():
+        for model, metrics in models.items():
+            if metrics['F1 Score'] > best_score:
+                best_score = metrics['F1 Score']
+                best_model = model
+                best_feature = feature
+    
+    return best_feature, best_model, best_score
+
+# Combine all results
+all_results = {
+    "TF-IDF": tfidf_results,
+    "LDA": lda_results,
+    "BERT": bert_results,
+    "Word2Vec": word2vec_results,
+    "Doc2Vec": doc2vec_results
+}
+
+best_feature, best_model, best_score = find_best_model(all_results)
+
+print(f"Best Model: {best_model}")
+print(f"Best Feature: {best_feature}")
+print(f"Best F1 Score: {best_score:.4f}")
+
+# Use the best model and feature extraction method
+if best_feature == "TF-IDF":
+    X = X_tfidf
+elif best_feature == "LDA":
+    X = X_lda
+elif best_feature == "BERT":
+    X = embeddings
+elif best_feature == "Word2Vec":
+    X = np.array([np.mean([word2vec_model.wv[word] for word in doc], axis=0) for doc in tokenized_docs])
+else:  # Doc2Vec
+    X = np.array([doc2vec_model.dv[i] for i in range(len(documents))])
+
+# Train the best model on all data
+if best_model == "Logistic Regression":
+    model = LogisticRegression(max_iter=1000)
+elif best_model == "Decision Tree":
+    model = DecisionTreeClassifier()
+else:  # Random Forest
+    model = RandomForestClassifier()
+
+# Train and predict for each class
+classes = ["Economic", "Environmental", "Social"]
+predictions = {}
+
+for class_name in classes:
+    y = combined_df[class_name].fillna(0)
+    model.fit(X, y)
+    predictions[class_name] = model.predict(X)
+
+# Create sets of indicators for each class based on predictions
+economic_indicators = set(combined_df[predictions["Economic"] == 1]["Indicator"])
+environmental_indicators = set(combined_df[predictions["Environmental"] == 1]["Indicator"])
+social_indicators = set(combined_df[predictions["Social"] == 1]["Indicator"])
+
+# Create Venn diagram
+plt.figure(figsize=(10, 10))
+venn3([economic_indicators, environmental_indicators, social_indicators], 
+      ('Economic', 'Environmental', 'Social'))
+plt.title("Venn Diagram of Predicted Indicator Classes")
 plt.show()
+
+# Print statistics
+print(f"Number of Economic Indicators: {len(economic_indicators)}")
+print(f"Number of Environmental Indicators: {len(environmental_indicators)}")
+print(f"Number of Social Indicators: {len(social_indicators)}")
+
+# Calculate overlaps
+eco_env = len(economic_indicators.intersection(environmental_indicators))
+eco_soc = len(economic_indicators.intersection(social_indicators))
+env_soc = len(environmental_indicators.intersection(social_indicators))
+all_three = len(economic_indicators.intersection(environmental_indicators, social_indicators))
+
+print(f"\nOverlap between Economic and Environmental: {eco_env}")
+print(f"Overlap between Economic and Social: {eco_soc}")
+print(f"Overlap between Environmental and Social: {env_soc}")
+print(f"Overlap among all three classes: {all_three}")
