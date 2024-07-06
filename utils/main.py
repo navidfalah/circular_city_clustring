@@ -1,150 +1,222 @@
 import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.decomposition import NMF
-from sklearn.preprocessing import normalize
-from nltk.stem import WordNetLemmatizer
-from nltk.tokenize import word_tokenize
-from nltk.corpus import stopwords
-import nltk
-import matplotlib.pyplot as plt
-from matplotlib_venn import venn3
-import seaborn as sns
 import numpy as np
-import os
+import torch
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.decomposition import LatentDirichletAllocation
+from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, confusion_matrix, classification_report, roc_auc_score, roc_curve
+import matplotlib.pyplot as plt
+from transformers import BertTokenizer, BertModel
+from gensim.models import Word2Vec, Doc2Vec
+from gensim.models.doc2vec import TaggedDocument
+from nltk.tokenize import word_tokenize
+import nltk
+from matplotlib_venn import venn3
 
-# Downloads for NLTK
+# Ensure NLTK downloads 'punkt' if not already done
 nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('wordnet')
 
-def preprocess_text(text):
-    if not isinstance(text, str):
-        text = ''
-    tokens = word_tokenize(text.lower())
-    lemmatizer = WordNetLemmatizer()
-    lemmatized = [lemmatizer.lemmatize(token) for token in tokens if token.isalpha()]
-    return ' '.join([word for word in lemmatized if word not in stopwords.words('english')])
+# Load the data
+df = pd.read_csv("indicators.csv")
 
-# Load feature data from CSV (assuming similar structure as before)
-features_df = pd.read_csv('features.csv')
-indicator_df = pd.read_csv('indicators.csv')  # Load indicator data from the new CSV
+# Load the additional labeled data
+labeled_df = pd.read_csv("features.csv")
 
-# Apply weights and preprocess text
-texts = []
-indicator_weights = {'Category': 1, 'Subcategory': 1, 'Indicator': 1, 'Description': 1}
-for _, row in indicator_df.iterrows():
-    text = ' '.join([preprocess_text(row['Category']) * indicator_weights['Category'], 
-                     preprocess_text(row['Subcategory']) * indicator_weights['Subcategory'], 
-                     preprocess_text(row['Indicator']) * indicator_weights['Indicator'], 
-                     preprocess_text(row['Description']) * indicator_weights['Description']])
-    texts.append(text)
+# Combine the labeled data with the original data
+combined_df = pd.concat([df, labeled_df], ignore_index=True)
 
-# Apply weights to features and preprocess text
-feature_weights = {'Dimension': 1, 'Core Features': 1, 'Examples of Indicators': 1, 'Key Initiatives': 1}
-for _, row in features_df.iterrows():
-    text = ' '.join([preprocess_text(row['Dimension']) * feature_weights['Dimension'], 
-                     preprocess_text(row['Core Features']) * feature_weights['Core Features'], 
-                     preprocess_text(row['Examples of Indicators']) * feature_weights['Examples of Indicators'], 
-                     preprocess_text(row['Key Initiatives']) * feature_weights['Key Initiatives']])
-    texts.append(text)
+# Remove rows with NaN values in the 'Indicator' column
+combined_df = combined_df.dropna(subset=['Indicator'])
 
-# Vectorization and NMF
-vectorizer = TfidfVectorizer(stop_words='english', max_df=0.85, min_df=1, ngram_range=(1, 2))
-X = vectorizer.fit_transform(texts)
+# Alternatively, you could fill NaN values with a placeholder string:
+# combined_df['Indicator'] = combined_df['Indicator'].fillna("No indicator")
 
-nmf = NMF(n_components=3, random_state=0, init='nndsvd')
-W = nmf.fit_transform(X)
-W_normalized = normalize(W, norm='l1', axis=1)
+# Preprocess the text data
+documents = combined_df["Indicator"]
 
-# Determine cluster memberships with a threshold
-threshold = 0.05  # Lower the threshold to include more indicators
-memberships = (W_normalized > threshold).astype(int)
+# TF-IDF Vectorization
+tfidf_vectorizer = TfidfVectorizer(max_features=1000, stop_words='english')
+X_tfidf = tfidf_vectorizer.fit_transform(documents)
 
-# Ensure that each indicator is assigned to at least one cluster
-for i in range(memberships.shape[0]):
-    if not memberships[i].any():
-        memberships[i, W_normalized[i].argmax()] = 1
+# LDA Model for Topic Modeling
+lda = LatentDirichletAllocation(n_components=10, random_state=42)
+X_lda = lda.fit_transform(X_tfidf)
 
-# Display the top terms per cluster to help identify appropriate names
-features = vectorizer.get_feature_names_out()
-top_terms = 10
-print("\nTop terms per cluster:")
-for i, comp in enumerate(nmf.components_):
-    terms_comp = zip(features, comp)
-    sorted_terms = sorted(terms_comp, key=lambda x: x[1], reverse=True)[:top_terms]
-    print(f"Cluster {i+1}: " + ", ".join([t[0] for t in sorted_terms]))
+# BERT Model for Embeddings
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+model = BertModel.from_pretrained('bert-base-uncased')
 
-# Based on the top terms, manually assign the cluster names
-cluster_names = ['Economic', 'Environmental', 'Social']
+# Tokenize and encode sequences
+tokenized = documents.apply(lambda x: tokenizer.encode(x, add_special_tokens=True))
+max_len = max(map(len, tokenized))
+padded = torch.tensor([i + [0] * (max_len - len(i)) for i in tokenized])
+with torch.no_grad():
+    embeddings = model(padded)[0][:, 0, :].numpy()
 
-# Calculate intersections for Venn diagram
-venn_labels = {
-    '100': sum((memberships[:, 0] == 1) & (memberships[:, 1] == 0) & (memberships[:, 2] == 0)),
-    '010': sum((memberships[:, 0] == 0) & (memberships[:, 1] == 1) & (memberships[:, 2] == 0)),
-    '001': sum((memberships[:, 0] == 0) & (memberships[:, 1] == 0) & (memberships[:, 2] == 1)),
-    '110': sum((memberships[:, 0] == 1) & (memberships[:, 1] == 1) & (memberships[:, 2] == 0)),
-    '101': sum((memberships[:, 0] == 1) & (memberships[:, 1] == 0) & (memberships[:, 2] == 1)),
-    '011': sum((memberships[:, 0] == 0) & (memberships[:, 1] == 1) & (memberships[:, 2] == 1)),
-    '111': sum((memberships[:, 0] == 1) & (memberships[:, 1] == 1) & (memberships[:, 2] == 1))
+# Word2Vec Model for Word Embeddings
+tokenized_docs = [word_tokenize(doc.lower()) for doc in documents]
+word2vec_model = Word2Vec(tokenized_docs, vector_size=100, window=5, min_count=1, workers=4)
+
+# Doc2Vec Model for Document Embeddings
+tagged_data = [TaggedDocument(words=word_tokenize(doc.lower()), tags=[str(i)]) for i, doc in enumerate(documents)]
+doc2vec_model = Doc2Vec(tagged_data, vector_size=100, window=5, min_count=1, workers=4)
+
+# Define the target variables
+y_economic = combined_df["Economic"].fillna(0)
+y_environmental = combined_df["Environmental"].fillna(0)
+y_social = combined_df["Social"].fillna(0)
+
+# Function to train and evaluate models
+def train_and_evaluate_models(X, y, label):
+    # Initialize models
+    models = {
+        "Logistic Regression": LogisticRegression(max_iter=1000),
+        "Decision Tree": DecisionTreeClassifier(),
+        "Random Forest": RandomForestClassifier()
+    }
+
+    results = {}
+
+    # Train and evaluate each model
+    for model_name, model in models.items():
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+        model.fit(X_train, y_train)
+        y_pred = model.predict(X_test)
+        y_proba = model.predict_proba(X_test)[:, 1]
+
+        # Calculate metrics
+        accuracy = accuracy_score(y_test, y_pred)
+        f1 = f1_score(y_test, y_pred, average='weighted')
+        precision = precision_score(y_test, y_pred, average='weighted')
+        recall = recall_score(y_test, y_pred, average='weighted')
+        roc_auc = roc_auc_score(y_test, y_proba)
+        fpr, tpr, _ = roc_curve(y_test, y_proba)
+
+        # Store results
+        results[model_name] = {
+            "Accuracy": accuracy,
+            "F1 Score": f1,
+            "Precision": precision,
+            "Recall": recall,
+            "ROC AUC": roc_auc,
+            "FPR": fpr,
+            "TPR": tpr
+        }
+
+        # Print classification report and confusion matrix
+        print(f"Model: {model_name} - {label}")
+        print(classification_report(y_test, y_pred))
+        print(f"Confusion Matrix:\n{confusion_matrix(y_test, y_pred)}")
+        print()
+
+    return results
+
+# Evaluate models for each feature extraction method
+print("===== TF-IDF Features =====")
+tfidf_results = train_and_evaluate_models(X_tfidf, y_economic, "TF-IDF")
+
+print("===== LDA Features =====")
+lda_results = train_and_evaluate_models(X_lda, y_economic, "LDA")
+
+print("===== BERT Embeddings =====")
+bert_results = train_and_evaluate_models(embeddings, y_economic, "BERT")
+
+print("===== Word2Vec Embeddings =====")
+word2vec_results = train_and_evaluate_models(
+    np.array([np.mean([word2vec_model.wv[word] for word in doc], axis=0) for doc in tokenized_docs]),
+    y_economic, "Word2Vec")
+
+print("===== Doc2Vec Embeddings =====")
+doc2vec_results = train_and_evaluate_models(
+    np.array([doc2vec_model.dv[i] for i in range(len(documents))]),
+    y_economic, "Doc2Vec")
+
+# Function to find the best model
+def find_best_model(results_dict):
+    best_model = None
+    best_score = 0
+    best_feature = None
+    
+    for feature, models in results_dict.items():
+        for model, metrics in models.items():
+            if metrics['F1 Score'] > best_score:
+                best_score = metrics['F1 Score']
+                best_model = model
+                best_feature = feature
+    
+    return best_feature, best_model, best_score
+
+# Combine all results
+all_results = {
+    "TF-IDF": tfidf_results,
+    "LDA": lda_results,
+    "BERT": bert_results,
+    "Word2Vec": word2vec_results,
+    "Doc2Vec": doc2vec_results
 }
 
-# Display counts of indicators per cluster
-print("Counts of indicators in each cluster:")
-for name, idx in zip(cluster_names, range(len(cluster_names))):
-    print(f"{name}: {sum(memberships[:, idx] == 1)}")
+best_feature, best_model, best_score = find_best_model(all_results)
 
-# Directory to save plots
-plot_dir = 'plots'
-os.makedirs(plot_dir, exist_ok=True)
+print(f"Best Model: {best_model}")
+print(f"Best Feature: {best_feature}")
+print(f"Best F1 Score: {best_score:.4f}")
 
-# Venn Diagram visualization
-plt.figure(figsize=(10, 8))
-venn3(subsets=venn_labels, set_labels=cluster_names)
-plt.title("Venn Diagram of Indicator Clusters")
-plt.savefig(os.path.join(plot_dir, 'venn_diagram.png'))
-plt.close()
+# Use the best model and feature extraction method
+if best_feature == "TF-IDF":
+    X = X_tfidf
+elif best_feature == "LDA":
+    X = X_lda
+elif best_feature == "BERT":
+    X = embeddings
+elif best_feature == "Word2Vec":
+    X = np.array([np.mean([word2vec_model.wv[word] for word in doc], axis=0) for doc in tokenized_docs])
+else:  # Doc2Vec
+    X = np.array([doc2vec_model.dv[i] for i in range(len(documents))])
 
-# Optional: Display the top terms per cluster with assigned names
-print("\nTop terms per cluster with assigned names:")
-for name, comp in zip(cluster_names, nmf.components_):
-    terms_comp = zip(features, comp)
-    sorted_terms = sorted(terms_comp, key=lambda x: x[1], reverse=True)[:top_terms]
-    print(f"Cluster {name}: " + ", ".join([t[0] for t in sorted_terms]))
+# Train the best model on all data
+if best_model == "Logistic Regression":
+    model = LogisticRegression(max_iter=1000)
+elif best_model == "Decision Tree":
+    model = DecisionTreeClassifier()
+else:  # Random Forest
+    model = RandomForestClassifier()
 
-# Additional Statistics and Visualizations
+# Train and predict for each class
+classes = ["Economic", "Environmental", "Social"]
+predictions = {}
 
-# Heatmap of Cluster Memberships with group names
-plt.figure(figsize=(12, 6))
-sns.heatmap(W_normalized, cmap='coolwarm', cbar=True, xticklabels=cluster_names, yticklabels=False)
-plt.title('Heatmap of Cluster Memberships')
-plt.xlabel('Clusters')
-plt.ylabel('Documents')
-plt.savefig(os.path.join(plot_dir, 'heatmap_cluster_memberships.png'))
-plt.close()
+for class_name in classes:
+    y = combined_df[class_name].fillna(0)
+    model.fit(X, y)
+    predictions[class_name] = model.predict(X)
 
-# Boxplot of Cluster Membership Strengths with group names
-plt.figure(figsize=(10, 6))
-sns.boxplot(data=W_normalized)
-plt.title('Boxplot of Cluster Membership Strengths')
-plt.xlabel('Clusters')
-plt.ylabel('Membership Strength')
-plt.xticks(ticks=range(len(cluster_names)), labels=cluster_names)
-plt.savefig(os.path.join(plot_dir, 'boxplot_membership_strengths.png'))
-plt.close()
+# Create sets of indicators for each class based on predictions
+economic_indicators = set(combined_df[predictions["Economic"] == 1]["Indicator"])
+environmental_indicators = set(combined_df[predictions["Environmental"] == 1]["Indicator"])
+social_indicators = set(combined_df[predictions["Social"] == 1]["Indicator"])
 
-# Pie chart of Cluster Distribution with group names
-cluster_counts = [sum(memberships[:, i] == 1) for i in range(len(cluster_names))]
-plt.figure(figsize=(8, 8))
-plt.pie(cluster_counts, labels=cluster_names, autopct='%1.1f%%', startangle=140, colors=sns.color_palette("coolwarm", len(cluster_names)))
-plt.title('Pie Chart of Cluster Distribution')
-plt.savefig(os.path.join(plot_dir, 'pie_chart_cluster_distribution.png'))
-plt.close()
+# Create Venn diagram
+plt.figure(figsize=(10, 10))
+venn3([economic_indicators, environmental_indicators, social_indicators], 
+      ('Economic', 'Environmental', 'Social'))
+plt.title("Venn Diagram of Predicted Indicator Classes")
+plt.show()
 
-cluster_data = pd.DataFrame(memberships, columns=cluster_names)
-indicator_names = indicator_df['Indicator'].tolist() + features_df['Examples of Indicators'].tolist()  # Adjust based on actual data column names
-cluster_data.insert(0, 'Indicator', indicator_names)
+# Print statistics
+print(f"Number of Economic Indicators: {len(economic_indicators)}")
+print(f"Number of Environmental Indicators: {len(environmental_indicators)}")
+print(f"Number of Social Indicators: {len(social_indicators)}")
 
-# Export to CSV
-output_csv_path = 'cluster_assignments.csv'
-cluster_data.to_csv(output_csv_path, index=False)
-print(f"Cluster assignments saved to {output_csv_path}")
+# Calculate overlaps
+eco_env = len(economic_indicators.intersection(environmental_indicators))
+eco_soc = len(economic_indicators.intersection(social_indicators))
+env_soc = len(environmental_indicators.intersection(social_indicators))
+all_three = len(economic_indicators.intersection(environmental_indicators, social_indicators))
+
+print(f"\nOverlap between Economic and Environmental: {eco_env}")
+print(f"Overlap between Economic and Social: {eco_soc}")
+print(f"Overlap between Environmental and Social: {env_soc}")
+print(f"Overlap among all three classes: {all_three}")
